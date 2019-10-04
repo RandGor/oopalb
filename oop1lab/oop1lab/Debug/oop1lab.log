@@ -1,0 +1,5 @@
+﻿  oop1lab.cpp
+  triangle.cpp
+  Создание кода...
+D:\Users\dom2\source\repos\oop1lab\oop1lab\oop1lab.cpp(9,1): warning C4326:  возвращаемый тип "main" должен быть "int", а не "void"
+  oop1lab.vcxproj -> D:\Users\dom2\source\repos\oop1lab\Debug\oop1lab.exe
