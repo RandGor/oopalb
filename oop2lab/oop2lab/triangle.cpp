@@ -210,7 +210,7 @@ void Triangle::readInf(const char name[]) {
 
 void Triangle::saveInf(const char name[]) {
 	FILE *f;
-	fopen_s(&f, name, "w");
+	fopen_s(&f, name, "a");
 	int brgb[3], rgb[3];
 
 	fprintf_s(f, "%d\n\n", mode);								//mode
@@ -238,11 +238,9 @@ void Triangle::saveInf(const char name[]) {
 
 	fprintf_s(f, "\n\n%d\n\n", border);							//border
 
-	if (mode != 2) return;
-
-	for (int i = 0; i < 3; i++)									//Cpoints(ToCut)
-		fprintf_s(f, "%d %d\n", Cpoints[i].x, Cpoints[i].y);
-
+	if (mode == 2)
+		for (int i = 0; i < 3; i++)									//Cpoints(ToCut)
+			fprintf_s(f, "%d %d\n", Cpoints[i].x, Cpoints[i].y);
 	fclose(f);
 }
 void Triangle::move_horizontally(int delta) {
