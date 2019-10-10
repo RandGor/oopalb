@@ -179,12 +179,12 @@ void Triangle::readInf(const char name[]) {
 		fscanf_s(f, "%d", &(rgb[i]));
 	color = RGB(rgb[0], rgb[1], rgb[2]);
 
+	fscanf_s(f, "%d", &(border));								//border
 	fscanf_s(f, "%d", &(bstyle));								//bstyle
 	for (int i = 0; i < 3; i++)									//bcolor					
 		fscanf_s(f, "%d", &(brgb[i]));
 	bcolor = RGB(brgb[0], brgb[1], brgb[2]);
 
-	fscanf_s(f, "%d", &(border));								//border
 
 	if (mode == 2)
 		for (int i = 0; i < 3; i++)
@@ -210,7 +210,7 @@ void Triangle::readInf(const char name[]) {
 
 void Triangle::saveInf(const char name[]) {
 	FILE *f;
-	fopen_s(&f, name, "a");
+	fopen_s(&f, name, "w");
 	int brgb[3], rgb[3];
 
 	fprintf_s(f, "%d\n\n", mode);								//mode
@@ -227,6 +227,7 @@ void Triangle::saveInf(const char name[]) {
 	for (int i = 0; i < 3; i++)									//color
 		fprintf_s(f, "%d ", rgb[i]);
 
+	fprintf_s(f, "\n\n%d\n\n", border);							//border
 	fprintf_s(f, "\n\n%d\n", bstyle);							//bstyle
 
 	brgb[0] = GetRValue(bcolor);
@@ -236,7 +237,6 @@ void Triangle::saveInf(const char name[]) {
 	for (int i = 0; i < 3; i++)									//bcolor					
 		fprintf_s(f, "%d ", brgb[i]);
 
-	fprintf_s(f, "\n\n%d\n\n", border);							//border
 
 	if (mode == 2)
 		for (int i = 0; i < 3; i++)									//Cpoints(ToCut)
