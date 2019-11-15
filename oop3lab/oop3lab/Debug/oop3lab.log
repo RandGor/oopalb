@@ -1,0 +1,8 @@
+﻿  external.cpp
+  oop3lab.cpp
+  stack.cpp
+  triangle.cpp
+D:\Users\dom2\source\repos\oop3lab\oop3lab\oop3lab.cpp(7,1): warning C4326:  возвращаемый тип "main" должен быть "int", а не "void"
+  Создание кода...
+D:\Users\dom2\source\repos\oop3lab\oop3lab\triangle.cpp(78,15): warning C4101:  exception: неиспользованная локальная переменная
+  oop3lab.vcxproj -> D:\Users\dom2\source\repos\oop3lab\Debug\oop3lab.exe
