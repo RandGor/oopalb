@@ -1,0 +1,4 @@
+﻿  oop4lab.cpp
+D:\Users\dom2\source\repos\oop4lab\oop4lab\oop4lab.cpp(6,1): warning C4326:  возвращаемый тип "main" должен быть "int", а не "void"
+D:\Users\dom2\source\repos\oop4lab\oop4lab\oop4lab.cpp(120,19): warning C4101:  exception: неиспользованная локальная переменная
+  oop4lab.vcxproj -> D:\Users\dom2\source\repos\oop4lab\Debug\oop4lab.exe
