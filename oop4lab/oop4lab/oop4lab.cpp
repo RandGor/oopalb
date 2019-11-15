@@ -23,11 +23,6 @@ void main()
 		c = _getch();
 		try
 		{
-			//if (_kbhit()) {
-				//clearConsole();
-				//printf_s("Menu:\n1 - Load data\n2 - Save data\n3 - Draw figure\nEsc - Exit\n");
-				//c = _getch();
-
 				switch (c)
 				{
 				case 49:	//1 - Load
@@ -45,11 +40,13 @@ void main()
 						Contour.load("incontour.txt");
 						printf_s("Contour data loaded.");
 						break;
-					case 51:	//2 - Points to combined
+					case 51:	//3 - Points to combined
+						Combined = combined(Painted);
 						Combined.load("incombined.txt");
 						printf_s("Combined data loaded.");
 						break;
 					}
+					Painted = painted(Brush, Contour);
 					break;
 				case 50:	//2 - Save
 					clearConsole();
@@ -66,7 +63,7 @@ void main()
 						Contour.save("outcontour.txt");
 						printf_s("Contour data saved.");
 						break;
-					case 51:	//2 - Points to combined
+					case 51:	//3 - Points to combined
 						Combined.save("outcombined.txt");
 						printf_s("Contour data saved.");
 						break;
@@ -81,6 +78,7 @@ void main()
 
 					int oldx = 0, oldy = 0;
 					int rtx = 0, rty = 0;
+
 					do {
 						tosleep = true;
 						clearConsole();
@@ -97,8 +95,6 @@ void main()
 							Sleep(50);
 							tosleep = false;
 						}
-
-
 							try
 							{
 								switch (c)
@@ -131,7 +127,6 @@ void main()
 
 					break;
 				}
-			//}
 		}
 		catch (int exception)
 		{

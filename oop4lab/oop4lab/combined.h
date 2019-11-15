@@ -8,8 +8,8 @@ class combined : public painted {		//Фигура с вырезом
 private:
 	POINT Cpoints[3];
 public:
-	combined() : Cpoints{NULL,NULL, NULL} {}
-	combined(POINT Cpoints[3]) : Cpoints{ Cpoints[0],Cpoints[1], Cpoints[2] } {}
+	combined() : Cpoints{ NULL,NULL, NULL } {}
+	combined(painted Painted);
 
 	void setFCPoints(POINT *new_Cpoints);
 	void getFCPoints(POINT *&curr_Cpoints);

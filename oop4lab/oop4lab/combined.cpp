@@ -1,6 +1,16 @@
 #include "combined.h"
 #include "error.h"
 
+combined::combined(painted Painted) {
+	Painted.getBColor(this->bcolor);
+	Painted.getBStyle(this->bstyle);
+	Painted.getPoints(this->points);
+	Painted.getBorder(this->border);
+	Painted.getColor(this->color);
+	Painted.getStyle(this->style);
+
+}
+
 void combined::setFCPoints(POINT *new_Cpoints) {
 	checkSizeTC(new_Cpoints);
 	for (int i = 0; i < 3; i++)
@@ -73,6 +83,7 @@ void combined::load(const char name[]) {
 	{
 		throw exception;
 	}
+
 	fclose(f);
 }
 

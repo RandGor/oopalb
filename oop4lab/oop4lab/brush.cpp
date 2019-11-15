@@ -22,7 +22,7 @@ void brush::save(const char name[]) {
 	fopen_s(&f, name, "w");
 	int brgb[3];
 
-	fprintf_s(f, "\n\n%d\n", bstyle);							//bstyle
+	fprintf_s(f, "%d\n", bstyle);								//bstyle
 
 	brgb[0] = GetRValue(bcolor);
 	brgb[1] = GetGValue(bcolor);

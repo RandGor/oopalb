@@ -1,5 +1,16 @@
 #include "painted.h"
 
+
+painted::painted(brush Brush, contour Contour) {
+	 Brush.getBColor(this->bcolor);
+	 Brush.getBStyle(this->bstyle);
+
+	 Contour.getPoints(this->points);
+	 Contour.getBorder(this->border);
+	 Contour.getColor(this->color);
+	 Contour.getStyle(this->style);
+}
+
 void painted::Draw(HDC hdc) {
 	checkSizeT(hdc);
 

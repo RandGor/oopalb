@@ -9,7 +9,7 @@ protected:
 	COLORREF bcolor;
 	int bstyle;
 public:
-	brush() {};
+	brush() : bcolor(NULL), bstyle(NULL) {};
 
 	void setBStyle(int new_bstyle);
 	void getBStyle(int &curr_bstyle);

@@ -10,7 +10,6 @@ protected:
 	POINT points[3];
 public:
 	contour() : color(NULL), style(NULL), border(NULL), points{NULL, NULL, NULL} {}
-	contour(COLORREF color, int style, int border, POINT points[3]) : color(color), style(style), border(border), points{points[0], points[1], points[2]} {}
 
 	void setStyle(int new_bstyle);
 	void getStyle(int &curr_bstyle);
