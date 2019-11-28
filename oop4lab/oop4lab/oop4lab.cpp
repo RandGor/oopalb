@@ -12,7 +12,11 @@ void main()
 	Triangle *triangle;
 	brush Brush = brush();
 	contour Contour = contour();
-	painted Painted = painted();
+	painted MainPainted = painted();
+	painted SecondPainted = painted();
+	
+	brush SecBrush = brush();
+	contour SecContour = contour();
 	combined Combined = combined();
 
 	char c = 0;
@@ -27,7 +31,7 @@ void main()
 				{
 				case 49:	//1 - Load
 					clearConsole();
-					printf_s("Menu:\n1 - Load brush\n2 - Load contour\n3 - Load points to combined figure\n4 - Exit\n");
+					printf_s("Menu:\n1 - Load brush\n2 - Load contour\n3 - Load external(for combined figure) brush and contour\n4 - Exit\n");
 					c = _getch();
 					clearConsole();
 					switch (c)
@@ -41,16 +45,18 @@ void main()
 						printf_s("Contour data loaded.");
 						break;
 					case 51:	//3 - Points to combined
-						Combined = combined(Painted);
-						Combined.load("incombined.txt");
+						SecBrush.load("inbrush_combined.txt");
+						SecContour.load("incontour_combined.txt");
 						printf_s("Combined data loaded.");
 						break;
 					}
-					Painted = painted(Brush, Contour);
+					MainPainted = painted(Brush, Contour);
+					SecondPainted = painted(SecBrush, SecContour);
+					Combined = combined(MainPainted, SecondPainted);
 					break;
 				case 50:	//2 - Save
 					clearConsole();
-					printf_s("Menu:\n1 - Save brush\n2 - Save contour\n3 - Save points to combined figure\n4 - Exit\n");
+					printf_s("Menu:\n1 - Save brush\n2 - Save contour\n3 - Save external(for combined figure) brush and contour\n4 - Exit\n");
 					c = _getch();
 					clearConsole();
 					switch (c)
@@ -64,8 +70,9 @@ void main()
 						printf_s("Contour data saved.");
 						break;
 					case 51:	//3 - Points to combined
-						Combined.save("outcombined.txt");
-						printf_s("Contour data saved.");
+						SecBrush.save("outbrush_combined.txt");
+						SecContour.save("outcontour_combined.txt");
+						printf_s("Internal triangle data saved.");
 						break;
 					}
 					break;
@@ -104,7 +111,7 @@ void main()
 									triangle->Draw(hdc);
 									break;
 								case 50:	//2 - Painted
-									triangle = &Painted;
+									triangle = &MainPainted;
 									triangle->Draw(hdc);
 									break;
 								case 51:	//3 - Combined
@@ -115,7 +122,15 @@ void main()
 							}
 							catch (int exception)
 							{
-								printf_s("Increase window size(current is %d : %d)", rtx, rty);
+								switch (exception)
+								{
+								case ERR_WRONG_CUT_POINTS:
+									printf_s("Second triangle cannot be placed in the first one");
+									break;
+								case ERR_WRONG_SIZE:
+									printf_s("Increase window size(current is %d : %d)", rtx, rty);
+									break;
+								}
 							}
 						if (_kbhit()) {
 							c = _getch();
@@ -152,9 +167,6 @@ void main()
 				break;
 			case ERR_WRONG_BCOLOR:
 				printf_s("Wrong pen color value (each color should be in range[0,255])");
-				break;
-			case ERR_WRONG_CUT_POINTS:
-				printf_s("Second triangle cannot be placed in the first one");
 				break;
 			case ERR_CANNOT_OPEN_INPUT_FILE:
 				printf_s("Cannot open input file");

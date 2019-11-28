@@ -55,8 +55,8 @@ void contour::save(const char name[]) {
 	for (int i = 0; i < 3; i++)
 		fprintf_s(f, "%d %d\n", points[i].x, points[i].y);
 
-	fprintf_s(f, "\n%d\n", style);
-
+	fprintf_s(f, "\n%d", style);
+	fprintf_s(f, "%d\n", border);
 	rgb[0] = GetRValue(color);
 	rgb[1] = GetGValue(color);
 	rgb[2] = GetBValue(color);
@@ -64,7 +64,7 @@ void contour::save(const char name[]) {
 	for (int i = 0; i < 3; i++)
 		fprintf_s(f, "%d ", rgb[i]);
 
-	fprintf_s(f, "\n\n%d\n\n", border);
+	
 
 	fclose(f);
 }

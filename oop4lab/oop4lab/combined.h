@@ -6,20 +6,14 @@
 
 class combined : public painted {		//Фигура с вырезом
 private:
-	POINT Cpoints[3];
+	painted ext;
+	painted intern;
 public:
-	combined() : Cpoints{ NULL,NULL, NULL } {}
-	combined(painted Painted);
-
-	void setFCPoints(POINT *new_Cpoints);
-	void getFCPoints(POINT *&curr_Cpoints);
+	combined() {}
+	combined(painted external, painted internal) : ext(external), intern(internal) {}
 
 	void Draw(HDC hdc);
-	void save(const char name[]);
-	void load(const char name[]);
-
-	void checkSizeTC(POINT *new_Cpoints);
-	void checkSizeT(HDC hdc);
+	void checkSizeTC();
 };
 
 #endif

@@ -141,8 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="inbrush.txt" />
-    <Text Include="incombined.txt" />
+    <Text Include="inbrush_combined.txt" />
     <Text Include="incontour.txt" />
+    <Text Include="incontour_combined.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

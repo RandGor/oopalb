@@ -12,10 +12,4 @@
 #define ERR_WRONG_BCOLOR 6
 #define ERR_WRONG_CUT_POINTS 7
 
-class error {
-public:
-	virtual void checkSizeT(HDC hdc) = 0;
-	virtual void checkSizeTC(HDC hdc) = 0;
-};
-
 #endif

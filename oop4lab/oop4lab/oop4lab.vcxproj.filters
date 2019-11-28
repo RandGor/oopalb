@@ -61,10 +61,13 @@
     <Text Include="inbrush.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
-    <Text Include="incombined.txt">
+    <Text Include="inbrush_combined.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
     <Text Include="incontour.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="incontour_combined.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
