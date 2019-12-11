@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  Triangle.h
 //  Implementation of the Class Triangle
-//  Created on:      10-дек-2019 21:45:34
+//  Created on:      11-дек-2019 23:55:24
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_7CEE42E1_2890_4d3e_AEA9_113FB3083A04__INCLUDED_)
-#define EA_7CEE42E1_2890_4d3e_AEA9_113FB3083A04__INCLUDED_
+#if !defined(EA_88C31D38_6AF9_4d8b_B777_D90C4D39AB98__INCLUDED_)
+#define EA_88C31D38_6AF9_4d8b_B777_D90C4D39AB98__INCLUDED_
 
 class Triangle
 {
@@ -19,4 +19,4 @@ public:
 	virtual void load(const char* name) =0;
 
 };
-#endif // !defined(EA_7CEE42E1_2890_4d3e_AEA9_113FB3083A04__INCLUDED_)
+#endif // !defined(EA_88C31D38_6AF9_4d8b_B777_D90C4D39AB98__INCLUDED_)

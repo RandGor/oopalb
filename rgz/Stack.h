@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  Stack.h
 //  Implementation of the Class Stack
-//  Created on:      10-дек-2019 21:47:23
+//  Created on:      11-дек-2019 23:55:24
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0411189A_5F1B_44ae_8056_92A6F1F8F07C__INCLUDED_)
-#define EA_0411189A_5F1B_44ae_8056_92A6F1F8F07C__INCLUDED_
+#if !defined(EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_)
+#define EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_
 
 #include "combined.h"
 
@@ -27,14 +27,14 @@ public:
 	void Push(T d){
 
 	}
-	T Pop(T figure){
+	T Pop(){
 
 		return  NULL;
 	}
 	void Print(HDC hdc){
 
 	}
-	T find(T figure, int* key){
+	T find(int* key){
 
 		return  NULL;
 	}
@@ -56,4 +56,4 @@ private:
 	int n;
 
 };
-#endif // !defined(EA_0411189A_5F1B_44ae_8056_92A6F1F8F07C__INCLUDED_)
+#endif // !defined(EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_)

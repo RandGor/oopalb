@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  brush.h
 //  Implementation of the Class brush
-//  Created on:      10-дек-2019 21:45:33
+//  Created on:      11-дек-2019 23:55:23
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_D2EC6E17_DFBC_41f5_A067_519653A217CF__INCLUDED_)
-#define EA_D2EC6E17_DFBC_41f5_A067_519653A217CF__INCLUDED_
+#if !defined(EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_)
+#define EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_
 
 class brush
 {
@@ -26,4 +26,4 @@ protected:
 	int bstyle;
 
 };
-#endif // !defined(EA_D2EC6E17_DFBC_41f5_A067_519653A217CF__INCLUDED_)
+#endif // !defined(EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_)

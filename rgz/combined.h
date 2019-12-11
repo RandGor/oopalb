@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  combined.h
 //  Implementation of the Class combined
-//  Created on:      10-дек-2019 21:45:33
+//  Created on:      11-дек-2019 23:55:23
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_1EE96F87_12D3_4a84_99AA_3FDBC197BEA7__INCLUDED_)
-#define EA_1EE96F87_12D3_4a84_99AA_3FDBC197BEA7__INCLUDED_
+#if !defined(EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_)
+#define EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_
 
 #include "painted.h"
 
@@ -30,4 +30,4 @@ private:
 	painted intern;
 
 };
-#endif // !defined(EA_1EE96F87_12D3_4a84_99AA_3FDBC197BEA7__INCLUDED_)
+#endif // !defined(EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_)

@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  contour.h
 //  Implementation of the Class contour
-//  Created on:      10-дек-2019 21:45:33
+//  Created on:      11-дек-2019 23:55:24
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_FFF2A6E2_BD73_48e8_B183_BF7F51B24E1A__INCLUDED_)
-#define EA_FFF2A6E2_BD73_48e8_B183_BF7F51B24E1A__INCLUDED_
+#if !defined(EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_)
+#define EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_
 
 #include "Triangle.h"
 
@@ -37,4 +37,4 @@ protected:
 	POINT points[3];
 
 };
-#endif // !defined(EA_FFF2A6E2_BD73_48e8_B183_BF7F51B24E1A__INCLUDED_)
+#endif // !defined(EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_)
