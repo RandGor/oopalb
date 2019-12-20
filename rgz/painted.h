@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  painted.h
 //  Implementation of the Class painted
-//  Created on:      11-дек-2019 23:55:24
+//  Created on:      20-дек-2019 12:34:03
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_093713F2_6FA4_44a4_839D_8CD5D79036A5__INCLUDED_)
-#define EA_093713F2_6FA4_44a4_839D_8CD5D79036A5__INCLUDED_
+#if !defined(EA_1FA6AECE_C988_4c7b_ABB3_933CEF4930CE__INCLUDED_)
+#define EA_1FA6AECE_C988_4c7b_ABB3_933CEF4930CE__INCLUDED_
 
 #include "contour.h"
 #include "brush.h"
@@ -18,9 +18,9 @@ public:
 	painted();
 	painted(brush Brush, contour Contour);
 	virtual ~painted();
+	void Draw(HDC hdc);
 	void load(const char* name1, const char* name2);
 	void save(const char* name);
-	void Draw(HDC hdc);
 
 };
-#endif // !defined(EA_093713F2_6FA4_44a4_839D_8CD5D79036A5__INCLUDED_)
+#endif // !defined(EA_1FA6AECE_C988_4c7b_ABB3_933CEF4930CE__INCLUDED_)

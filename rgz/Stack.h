@@ -1,14 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  Stack.h
 //  Implementation of the Class Stack
-//  Created on:      11-дек-2019 23:55:24
+//  Created on:      20-дек-2019 12:34:15
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_)
-#define EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_
-
-#include "combined.h"
+#if !defined(EA_45F2258C_DECC_40e4_A914_4CC483F5F68C__INCLUDED_)
+#define EA_45F2258C_DECC_40e4_A914_4CC483F5F68C__INCLUDED_
 
 template<class T>
 class Stack
@@ -24,22 +22,9 @@ public:
 	~Stack(){
 
 	}
-	void Push(T d){
-
-	}
-	T Pop(){
-
-		return  NULL;
-	}
-	void Print(HDC hdc){
-
-	}
 	T find(int* key){
 
 		return  NULL;
-	}
-	void Save(const char* name){
-
 	}
 	bool isEmpty(bool false){
 
@@ -49,11 +34,24 @@ public:
 
 		return false;
 	}
+	T Pop(){
+
+		return  NULL;
+	}
+	void Print(HDC hdc){
+
+	}
+	void Push(T d){
+
+	}
+	void Save(const char* name){
+
+	}
 
 private:
 	T* arr;
-	int top;
 	int n;
+	int top;
 
 };
-#endif // !defined(EA_B7685AE9_4670_4f41_B43A_8468F09D0408__INCLUDED_)
+#endif // !defined(EA_45F2258C_DECC_40e4_A914_4CC483F5F68C__INCLUDED_)

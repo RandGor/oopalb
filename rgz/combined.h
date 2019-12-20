@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  combined.h
 //  Implementation of the Class combined
-//  Created on:      11-дек-2019 23:55:23
+//  Created on:      20-дек-2019 12:34:09
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_)
-#define EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_
+#if !defined(EA_0517600C_24E6_4425_BCFB_E6F859F1C38C__INCLUDED_)
+#define EA_0517600C_24E6_4425_BCFB_E6F859F1C38C__INCLUDED_
 
 #include "painted.h"
 
@@ -17,17 +17,17 @@ public:
 	virtual ~combined();
 
 	combined();
-	void Draw(HDC hdc);
 	void addExt(painted Ext);
-	void save(const char* name);
-	void load(const char* name1, const char* name2);
 	void checkSizeTC();
-	void getIntern(painted& t);
+	void Draw(HDC hdc);
 	void getExt(painted& t);
+	void getIntern(painted& t);
+	void load(const char* name1, const char* name2);
+	void save(const char* name);
 
 private:
 	painted ext;
 	painted intern;
 
 };
-#endif // !defined(EA_188087E6_A419_478b_A50A_237C2B96A03B__INCLUDED_)
+#endif // !defined(EA_0517600C_24E6_4425_BCFB_E6F859F1C38C__INCLUDED_)

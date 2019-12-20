@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  contour.h
 //  Implementation of the Class contour
-//  Created on:      11-дек-2019 23:55:24
+//  Created on:      20-дек-2019 12:33:50
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_)
-#define EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_
+#if !defined(EA_8ADD8F40_A3A0_4446_BE2F_825E59912EA8__INCLUDED_)
+#define EA_8ADD8F40_A3A0_4446_BE2F_825E59912EA8__INCLUDED_
 
 #include "Triangle.h"
 
@@ -17,24 +17,24 @@ public:
 	virtual ~contour();
 
 	contour();
-	void setStyle(int new_style);
-	void getStyle(int & curr_style);
-	void setColor(COLORREF new_color);
-	void getColor(COLORREF & curr_color);
-	void setBorder(int new_border);
-	void getBorder(int & curr_border);
-	void setPoints(POINT * new_points);
-	void getPoints(POINT * curr_points);
-	void Draw(HDC hdc);
-	void save(const char* name);
-	void load(const char* name);
 	void checkSizeT(HDC hdc);
+	void Draw(HDC hdc);
+	void getBorder(int & curr_border);
+	void getColor(COLORREF & curr_color);
+	void getPoints(POINT * curr_points);
+	void getStyle(int & curr_style);
+	void load(const char* name);
+	void save(const char* name);
+	void setBorder(int new_border);
+	void setColor(COLORREF new_color);
+	void setPoints(POINT * new_points);
+	void setStyle(int new_style);
 
 protected:
-	COLORREF color;
 	int border;
-	int style;
+	COLORREF color;
 	POINT points[3];
+	int style;
 
 };
-#endif // !defined(EA_0D61719A_326B_4ac8_ADB0_DFD73A1336E8__INCLUDED_)
+#endif // !defined(EA_8ADD8F40_A3A0_4446_BE2F_825E59912EA8__INCLUDED_)

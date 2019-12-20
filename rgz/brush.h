@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////
 //  brush.h
 //  Implementation of the Class brush
-//  Created on:      11-дек-2019 23:55:23
+//  Created on:      20-дек-2019 12:33:56
 //  Original author: Kappa
 ///////////////////////////////////////////////////////////
 
-#if !defined(EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_)
-#define EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_
+#if !defined(EA_0184FF9C_5E11_4f15_A47F_0D49171E1B4E__INCLUDED_)
+#define EA_0184FF9C_5E11_4f15_A47F_0D49171E1B4E__INCLUDED_
 
 class brush
 {
@@ -14,16 +14,16 @@ class brush
 public:
 	brush();
 	virtual ~brush();
-	void setBStyle(int new_bstyle);
-	void getBStyle(int& curr_bstyle);
-	void setBColor(COLORREF new_bcolor);
 	void getBColor(COLORREF& curr_bcolor);
-	void save(const char* name);
+	void getBStyle(int& curr_bstyle);
 	void load(const char* name);
+	void save(const char* name);
+	void setBColor(COLORREF new_bcolor);
+	void setBStyle(int new_bstyle);
 
 protected:
 	COLORREF bcolor;
 	int bstyle;
 
 };
-#endif // !defined(EA_A3503D64_505C_4ee5_8648_374DAF15A863__INCLUDED_)
+#endif // !defined(EA_0184FF9C_5E11_4f15_A47F_0D49171E1B4E__INCLUDED_)
